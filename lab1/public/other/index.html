@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Прочее</title>
+    <style>
+      body {
+        margin: 0 auto;
+        max-width: 700px;
+        min-width: 0;
+        padding: 0 10px 25px;
+        font-family: "Helvetica", "Arial", sans-serif;
+      }
+      title {
+        color: rgb(88, 23, 23)
+      }
+      h2 {
+        margin-top: 1em;
+        padding-top: 1em;
+      }
+      nav a {
+        margin-left: 20px;
+      }
+      body {
+        color: rgb(88, 23, 23);
+      }
+      h1, h2, strong {
+        color: rgb(88, 23, 23)
+      }
+      header {
+        margin: 0px; font-size: 23px;
+      }
+      article {
+        font-size: 16px;
+      }
+      nav {
+        font-size: 18px; letter-spacing: 1px;
+      }
+      h1 {
+        font-size: 26px;
+      }
+      h2 {
+        font-size: 23px;
+      }
+      a { color: #ffa64d; }
+
+      /*
+      https://developer.mozilla.org/en-US/docs/Web/CSS/grid
+      grid-style
+      */
+
+      body {
+        display: grid;
+        row-gap: 5px;
+        grid-template-columns: auto auto;
+        grid-template-rows: 60px auto;
+        grid-template-areas:
+          "header nav"
+          "ct ct"
+      }
+      header {
+        grid-area: header;
+        justify-self: left;
+        align-self: end;
+      }
+      nav {
+        grid-area: nav;
+        justify-self: right;
+        align-self: end;
+      }
+      nav a {
+        text-align: right;
+      }
+      article {
+        grid-area: ct;
+        border-top: 2px solid gray;
+      }
+      /*
+      Responsive design
+      */
+
+      @media screen and (max-width: 430px) {
+        body {
+          grid-template-columns: auto;
+          grid-template-rows: minmax(40px, auto) minmax(30px, auto) auto auto;
+          grid-template-areas:
+          "header"
+          "nav"
+          "ct"
+        }
+        header, nav {
+          text-align: center;
+          justify-self: center;
+        }
+        nav a {
+          margin: 0 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      Турнир по Dota 2
+    </header>
+    <nav>
+      <a href= "../winners">Победители</a>
+      <a href= "../content/">На главную</a>
+    </nav>
+    <article>
+      <h1 id="prochee">Прочее</h1>
+<img src="https://s-cdn.sportbox.ru/images/styles/upload/fp_fotos/bc/16/b9cb32adc85761b424c85450f49bc049634032d16ee02773671992.jpg" alt="drawing" width="700"/>
+<p>Эгида чемпионов (англ. Aegis of Champions) — это награда, разыгрываемая на турнире. Она представляет собой щит, сделанный компанией Weta из бронзы и серебра.
+На лицевой стороне изображён рисунок, изображающий борьбу между светлой и тёмной стороной, на обратной стороне выгравированы имена всех победителей The International.
+Этот кубок можно использовать как настоящий щит. В щите специально сделаны углубления по кругу, для удобства поднятия над головой.</p>
+
+    </article>
+  </body>
+</html>

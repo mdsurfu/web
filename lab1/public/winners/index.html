@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Winners</title>
+    <style>
+      body {
+        margin: 0 auto;
+        max-width: 700px;
+        min-width: 0;
+        padding: 0 10px 25px;
+        font-family: "Helvetica", "Arial", sans-serif;
+      }
+      title {
+        color: rgb(88, 23, 23)
+      }
+      h2 {
+        margin-top: 1em;
+        padding-top: 1em;
+      }
+      nav a {
+        margin-left: 20px;
+      }
+      body {
+        color: rgb(88, 23, 23);
+      }
+      h1, h2, strong {
+        color: rgb(88, 23, 23)
+      }
+      header {
+        margin: 0px; font-size: 23px;
+      }
+      article {
+        font-size: 16px;
+      }
+      nav {
+        font-size: 18px; letter-spacing: 1px;
+      }
+      h1 {
+        font-size: 26px;
+      }
+      h2 {
+        font-size: 23px;
+      }
+      a { color: #ffa64d; }
+
+      /*
+      https://developer.mozilla.org/en-US/docs/Web/CSS/grid
+      grid-style
+      */
+
+      body {
+        display: grid;
+        row-gap: 5px;
+        grid-template-columns: auto auto;
+        grid-template-rows: 60px auto;
+        grid-template-areas:
+          "header nav"
+          "ct ct"
+      }
+      header {
+        grid-area: header;
+        justify-self: left;
+        align-self: end;
+      }
+      nav {
+        grid-area: nav;
+        justify-self: right;
+        align-self: end;
+      }
+      nav a {
+        text-align: right;
+      }
+      article {
+        grid-area: ct;
+        border-top: 2px solid gray;
+      }
+      /*
+      Responsive design
+      */
+
+      @media screen and (max-width: 430px) {
+        body {
+          grid-template-columns: auto;
+          grid-template-rows: minmax(40px, auto) minmax(30px, auto) auto auto;
+          grid-template-areas:
+          "header"
+          "nav"
+          "ct"
+        }
+        header, nav {
+          text-align: center;
+          justify-self: center;
+        }
+        nav a {
+          margin: 0 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      Турнир по Dota 2
+    </header>
+    <nav>
+      <a href= "../content/">На главную</a>
+      <a href="../other/">Прочее</a>
+    </nav>
+    <article>
+      <h1 id="ti-winners">TI Winners</h1>
+<table><thead><tr><th style="text-align: center">год</th><th style="text-align: center">победители</th></tr></thead><tbody>
+<tr><td style="text-align: center">2011</td><td style="text-align: center">Украина Natus Vincere</td></tr>
+<tr><td style="text-align: center">2012</td><td style="text-align: center">Китай Invictus Gaming</td></tr>
+<tr><td style="text-align: center">2013</td><td style="text-align: center">Швеция The Alliance</td></tr>
+<tr><td style="text-align: center">2014</td><td style="text-align: center">Китай NewBee</td></tr>
+<tr><td style="text-align: center">2015</td><td style="text-align: center">Соединённые Штаты Америки Evil Geniuses</td></tr>
+<tr><td style="text-align: center">2016</td><td style="text-align: center">Китай Wings Gaming</td></tr>
+<tr><td style="text-align: center">2017</td><td style="text-align: center">Европа Team Liquid</td></tr>
+<tr><td style="text-align: center">2018</td><td style="text-align: center">Европа OG</td></tr>
+<tr><td style="text-align: center">2019</td><td style="text-align: center">Европа OG</td></tr>
+<tr><td style="text-align: center">2021</td><td style="text-align: center">Россия Team Spirit</td></tr>
+<tr><td style="text-align: center">2022</td><td style="text-align: center">Европа Tundra Esports</td></tr>
+</tbody></table>
+
+    </article>
+  </body>
+</html>
